@@ -1,3 +1,4 @@
+import 'package:drink_app/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../models/beverage.dart';
@@ -127,6 +128,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   icon: const Icon(Icons.shopping_cart),
                   onPressed: () {
                     // TODO: Navigation ไปหน้า CartScreen
+                    Navigator.push(
+                      context, 
+                      MaterialPageRoute(
+                        builder: (context) => const CartScreen(),
+                      )
+                    );
                   },
                 ),
               );
